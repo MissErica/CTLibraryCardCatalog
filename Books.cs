@@ -15,7 +15,7 @@ namespace LibraryCardCatalog
         public int YearPublished { get; set; }
 
         /// <summary>
-        /// 
+        /// This is a book
         /// </summary>
         public Books()
         {
