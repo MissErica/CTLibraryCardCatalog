@@ -14,18 +14,29 @@ namespace LibraryCardCatalog
         public string NonFiction { get; set; }
         public int YearPublished { get; set; }
 
-            public Books()
-            {
+        /// <summary>
+        /// 
+        /// </summary>
+        public Books()
+        {
 
-            }
-
-            public Books(string title, string author, string fiction, string nonfiction, int year)
-            {
-                this.Title = title;
-                this.Author = author;
-                this.Fiction = fiction;
-                this.NonFiction = nonfiction;
-                this.YearPublished = year;
-            }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="author"></param>
+        /// <param name="fiction"></param>
+        /// <param name="nonfiction"></param>
+        /// <param name="year"></param>
+        public Books(string title, string author, string fiction, string nonfiction, int year)
+        {
+            this.Title = title;
+            this.Author = author;
+            this.Fiction = fiction;
+            this.NonFiction = nonfiction;
+            this.YearPublished = year;
+        }
+    }
 }
