@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryCardCatalog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,19 @@ namespace CTLCCFile1
 
             // prompt user to enter the name of a file
 
+            //this file will be used to save all the information
+            //in the application when the user closes it
+
             Console.WriteLine("Please enter a file name:" );
             string userFileName = Console.ReadLine();
 
-            //this file will be used to save all the information
-            //in the application when the user closes it
+           
+
+            //user is presented with a numeric list of options
+            //user should be able to enter a numeric choice
+
+            //if user enters 1 or 2 then menu should redisplay
+            //if user enters 3 then menu should close
 
             int number = 0;
             while (number != 3)
@@ -39,12 +48,17 @@ namespace CTLCCFile1
 
                     case 1:
                         break;
+
                     case 2:
+                        
+                        Books b = new Books("mary", "mary", 1984);
+                        b.AddBooks();
                         break;
+
                     case 3:
                         break;
                     default:
-                        Console.WriteLine("Sorry, invalid selecton");
+                        Console.WriteLine("Sorry, invalid selecton. Please enter 1, 2 or 3");
                         break;
 
 
@@ -52,11 +66,6 @@ namespace CTLCCFile1
             }
             
 
-        //user is presented with a numeric list of options
-        //user should be able to enter a numeric choice
-
-        //if user enters 1 or 2 then menu should redisplay
-        //if user enters 3 then menu should close
         }
     }
 }

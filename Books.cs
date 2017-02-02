@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace LibraryCardCatalog
 {
-    class Books
+     public class Books
     {
         public string Title { get; set; }
         public string Author { get; set; }
-        public string Fiction { get; set; }
-        public string NonFiction { get; set; }
+       // public string Fiction { get; set; }
+       // public string NonFiction { get; set; }
         public int YearPublished { get; set; }
 
-        /// <summary>
-        /// This is a book
-        /// This is my class
-        /// and this is completely different!
-        /// </summary>
+       
         public Books()
         {
+            
+
 
         }
 
@@ -32,13 +30,25 @@ namespace LibraryCardCatalog
         /// <param name="fiction"></param>
         /// <param name="nonfiction"></param>
         /// <param name="year"></param>
-        public Books(string title, string author, string fiction, string nonfiction, int year)
+        /// 
+
+        public Books(
+            string title, 
+            string author, 
+            //string fiction,
+            //string nonfiction, 
+            int year)
         {
             this.Title = title;
             this.Author = author;
-            this.Fiction = fiction;
-            this.NonFiction = nonfiction;
+            //this.Fiction = fiction;
+           // this.NonFiction = nonfiction;
             this.YearPublished = year;
         }
+
+        //internal void AddBooks()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
