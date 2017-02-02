@@ -16,6 +16,8 @@ namespace LibraryCardCatalog
 
         /// <summary>
         /// This is a book
+        /// This is my class
+        /// and this is completely different!
         /// </summary>
         public Books()
         {
