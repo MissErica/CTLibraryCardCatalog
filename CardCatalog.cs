@@ -10,7 +10,7 @@ namespace LibraryCardCatalog
     {
         private string _filename;
 
-        private List<Books> books = new List<Books>;
+        private List<Books> books = new List<Books>();
 
 
         public CardCatalog(string fileName)
@@ -21,7 +21,7 @@ namespace LibraryCardCatalog
         //method to list all the books in the catalog
         public void ListBooks()
         {
-            foreach (var b in Books)
+            foreach (var b in books)
             {
                 Console.WriteLine("Title: {0} \nAuthor: {1} \nGenre: {2} \nYear Published: {3}",
                     b.Title, b.Author, b.Fiction, b.NonFiction, b.YearPublished);
@@ -38,7 +38,7 @@ namespace LibraryCardCatalog
             string author = Console.ReadLine();
 
             Console.WriteLine("Please enter the Year Published: ");
-            string author = Console.ReadLine();
+            string year = Console.ReadLine();
 
             Books book = new Books();
             book.Title = title;
