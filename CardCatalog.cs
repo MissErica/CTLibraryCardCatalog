@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace LibraryCardCatalog
 {
@@ -10,7 +13,8 @@ namespace LibraryCardCatalog
     {
         private string _filename;
 
-        private List<Books> books = new List<Books>(); //private member variable that contains all of the books
+        private List<Books> books = new List<Books>(); 
+        //private member variable that contains all of the books
 
 
         public CardCatalog(string fileName) 
@@ -35,25 +39,23 @@ namespace LibraryCardCatalog
         //method to add the books
         public void AddBook()
         {
-            Console.WriteLine("Please enter the Title: ");
+            Console.Clear();
+            Console.Write("Please enter the Title: ");
             string title = Console.ReadLine();
 
-            Console.WriteLine("Please enter the Author: ");
+            Console.Write("Please enter the Author: ");
             string author = Console.ReadLine();
 
-            Console.WriteLine("Please enter the Year Published: ");
+            Console.Write("Please enter the Year Published: ");
             string year = Console.ReadLine();
 
-            //Books book = new Books();
-           //Title = title;
-           //Author = author;
-           //YearPublished = year;
-
-
+            Console.Write(title + "successfully added into your catalog.");
+            Books book = new Books();
+            book.Title = title;
+            book.Author = author;
+            book.YearPublished = year;
             //books.Add(book);
-
             //serialization should be placed here
-
         }
 
         //method to save the books

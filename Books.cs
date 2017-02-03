@@ -3,41 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace LibraryCardCatalog
 {
-     public class Books
+    [Serializable()]
+    public class Books
     {
         public string Title { get; set; }
         public string Author { get; set; }
        // public string Fiction { get; set; }
        // public string NonFiction { get; set; }
-        public int YearPublished { get; set; }
+        public string YearPublished { get; set; }
 
-       
-        public Books()
-        {
-            
-
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="title"></param>
-        /// <param name="author"></param>
-        /// <param name="fiction"></param>
-        /// <param name="nonfiction"></param>
-        /// <param name="year"></param>
-        /// 
+        public Books() {    }
 
         public Books(
             string title, 
             string author, 
             //string fiction,
             //string nonfiction, 
-            int year)
+            string year)
         {
             this.Title = title;
             this.Author = author;
