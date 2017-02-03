@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace CTLCCFile1
 {
     class Program
@@ -17,10 +19,10 @@ namespace CTLCCFile1
             //this file will be used to save all the information
             //in the application when the user closes it
 
-            Console.WriteLine("Please enter a file name:" );
+            Console.WriteLine("Please enter a file name:");
             string userFileName = Console.ReadLine();
+            CardCatalog a = new CardCatalog(userFileName);
 
-           
 
             //user is presented with a numeric list of options
             //user should be able to enter a numeric choice
@@ -38,24 +40,24 @@ namespace CTLCCFile1
                 Console.WriteLine("2.Add A Book");
                 Console.WriteLine("3.Save And Exit");
 
-               
 
-                number = int.Parse(Console.ReadLine());
+
+                number = Convert.ToInt32(Console.ReadLine());
 
 
                 switch (number)
                 {
 
                     case 1:
+                        a.ListBooks();
                         break;
 
                     case 2:
-                        
-                        Books b = new Books("mary", "mary", 1984);
-                        b.AddBooks();
+                        a.AddBook();
                         break;
 
                     case 3:
+                        // Save Method should be placed here
                         break;
                     default:
                         Console.WriteLine("Sorry, invalid selecton. Please enter 1, 2 or 3");
@@ -64,7 +66,7 @@ namespace CTLCCFile1
 
                 }
             }
-            
+
 
         }
     }

@@ -29,18 +29,20 @@ namespace LibraryCardCatalog
                     b.YearPublished);
             }
 
+            //deserialization shoud be placed here
+
         }
         //method to add the books
-        public void AddBook(string title, string author, int year)
+        public void AddBook()
         {
             Console.WriteLine("Please enter the Title: ");
-            title = Console.ReadLine();
+            string title = Console.ReadLine();
 
             Console.WriteLine("Please enter the Author: ");
-             author = Console.ReadLine();
+            string author = Console.ReadLine();
 
             Console.WriteLine("Please enter the Year Published: ");
-            year = Convert.ToInt32(Console.ReadLine());
+            string year = Console.ReadLine();
 
             //Books book = new Books();
            //Title = title;
@@ -50,12 +52,14 @@ namespace LibraryCardCatalog
 
             //books.Add(book);
 
+            //serialization should be placed here
+
         }
 
         //method to save the books
         public void Save()
-        {
-
+        { 
+            
         }
     }
 }
