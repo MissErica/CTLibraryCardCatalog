@@ -10,7 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace LibraryCardCatalog
 {
     [Serializable()]
-    public class Books
+    public class Books// : //ISerializable
     {
         public string Title { get; set; }
         public string Author { get; set; }
@@ -33,7 +33,6 @@ namespace LibraryCardCatalog
            // this.NonFiction = nonfiction;
             this.YearPublished = year;
         }
-
         //internal void AddBooks()
         //{
         //    throw new NotImplementedException();

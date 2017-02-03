@@ -19,12 +19,13 @@ namespace CTLCCFile1
 
             Console.WriteLine("Please enter a file name:");
             string userFileName = Console.ReadLine();
-            CardCatalog a = new CardCatalog(userFileName);
 
             //user is presented with a numeric list of options
             //user should be able to enter a numeric choice
             //if user enters 1 or 2 then menu should redisplay
             //if user enters 3 then menu should close
+       
+            CardCatalog a = new CardCatalog(userFileName);
             Console.Clear();
             Console.WriteLine("Please select an option below (choose by number 1 - 3):");
             Console.Write("1: List All Books\n2: Add A Book\n3: Remove Book\n4: Save & Exit\nChoice: ");
@@ -46,7 +47,6 @@ namespace CTLCCFile1
                     Console.WriteLine("Sorry, invalid selecton. Please enter 1, 2 or 3");
                     break;
             }
-                  
-       }
+        }
     }
 }

@@ -16,12 +16,10 @@ namespace LibraryCardCatalog
         private List<Books> books = new List<Books>(); 
         //private member variable that contains all of the books
 
-
         public CardCatalog(string fileName) 
         {
             this._filename = fileName;
         }
-
         //method to list all the books in the catalog
         public void ListBooks()
         {
@@ -32,9 +30,7 @@ namespace LibraryCardCatalog
                     b.Author, //b.Fiction, b.NonFiction,
                     b.YearPublished);
             }
-
             //deserialization shoud be placed here
-
         }
         //method to add the books
         public void AddBook()
@@ -49,17 +45,20 @@ namespace LibraryCardCatalog
             Console.Write("Please enter the Year Published: ");
             string year = Console.ReadLine();
 
-            Console.Write(title + "successfully added into your catalog.");
+            Console.Write(title + " successfully added into your catalog.");
+            Console.ReadLine();
+
             Books book = new Books();
             book.Title = title;
             book.Author = author;
             book.YearPublished = year;
-            //books.Add(book);
-            //serialization should be placed here
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("filename.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, book);
         }
 
         //method to save the books
-        public void Save()
+        public void SaveandExit()
         { 
             
         }
